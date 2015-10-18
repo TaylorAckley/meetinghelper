@@ -1,0 +1,73 @@
+ input[type="text"] {
+  display: block;
+  margin: 2px;
+  padding: 5px;
+  width: 100%;
+  font-family: 'Lora';
+  font-size: 18px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+   box-sizing: border-box;
+}
+
+input[type="datetime-local"] {
+ display: block;
+ margin: 2px;
+ padding: 5px;
+ width: 100%;
+ font-family: 'Lora';
+ font-size: 18px;
+ border: 2px solid white;
+ border-radius: 10px;
+ background: transparent;
+ color: white;
+  box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+color: #e74c3c;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+color: #e74c3c;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+color: #e74c3c;
+}
+
+:-ms-input-placeholder {
+color: #e74c3c;
+}
+
+ input[type="text"]:focus {
+  outline: none;
+}
+
+ input[type="email"] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: 'Lora';
+  font-size: 18px;
+  border: none;
+}
+ input[type="email"]:focus {
+  outline: none;
+}
+
+ input[type="password"] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: 'Lora';
+  font-size: 18px;
+  border: none;
+  box-shadow: none;
+
+}
+ input[type="password"]:focus {
+  outline: none;
+}

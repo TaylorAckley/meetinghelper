@@ -1,0 +1,51 @@
+<template name="app">
+  <section class="low-hero">
+    <div class="container">
+<div class="row">
+  <h1>Meeting Helper</h1>
+</div>
+    </div>
+      </section>
+
+    <section class="top-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <input class="form-control" type="datetime-local" id="meeting">
+          </div>
+        </div>
+  <div class="row">
+    <form class="form-inline">
+      <div class="col-md-6">
+        <input type="text" id="left">
+        </div>
+        <div class="col-md-6">
+          <input type="text" id="right">
+          </div>
+    </form>
+
+  </div>
+<div class="row">
+  <div class="col-md-6">
+    <p>{{getLeftTzObj}}</p>
+  </div>
+  <div class="col-md-6">
+    <p>{{getRightTzObj}}</p>
+  </div>
+</div>
+<div>
+  <button id="execute" class="btn btn-red">Find My Window</button>
+</div>
+<div class="row">
+  <div class="col-md-5">
+    <p>Difference: <span id="diff"></span></p>
+    <p>When it is 8am in Left, it is <span id="difflit"></span> in right</p>
+  </div>
+</div>
+      </div>
+
+  </section>
+  <section class="middle-hero footer">
+    <p>Taylor Ackley | <a href="http://github.com/taylorackley/meetinghelper">View this on <i  class="fa fa-github fa-lg"></i></a></p>
+  </section>
+</template>
