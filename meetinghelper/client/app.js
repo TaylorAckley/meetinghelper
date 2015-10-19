@@ -41,21 +41,32 @@ Meteor.http.get(url, function(error, result) {
 
 Template.app.events({
   "click #execute": function() {
-    var windowBeg = 8;
-    console.log(windowBeg.d);
-    var windowEnd = 17;
-    console.log(windowEnd.d);
+    $('#error').html("");
     var leftObj = Session.get("leftTzObj");
     var rightObj = Session.get("rightTzObj");
+    var date = $("#meeting").val();
     var leftUTC = leftObj[0];
     var rightUTC = rightObj[0];
+    if (leftObj && rightObj && date) {
     console.log(leftUTC);
     console.log(rightUTC);
     var diff = leftUTC - rightUTC;
-    $('#diff').html(diff);
+    if (diff < 0) {
+      diff = Math.abs(diff);
+      console.log(diff);
+      $('#diff').html(leftObj[2] + " is " + diff + " hours behind " + rightObj[2]);
+    }
+    else {
+      $('#diff').html(leftObj[2] + " is " + diff + " hours ahead of " + rightObj[2]);
+    }
     var difflit = (rightUTC - leftUTC) + 8;
       $('#difflit').html(difflit);
+      $('#results').removeClass('hidden');
+  }  // end if
+  else {
+    $('#error').html("Looks like you have a form value missing!");
   }
+}
 });
 
 
@@ -71,5 +82,8 @@ Template.app.helpers({
     console.log("right");
     console.log(rightTzObj);
     return rightTzObj;
+  },
+  getDate: function() {
+    return new Date();
   }
 });

@@ -11,7 +11,12 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <input class="form-control" type="datetime-local" id="meeting">
+            <h6 id="error"></h6>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <input class="form-control" type="datetime-local" id="meeting" placeholder="{{getDate}}">
           </div>
         </div>
   <div class="row">
@@ -36,14 +41,17 @@
 <div>
   <button id="execute" class="btn btn-red">Find My Window</button>
 </div>
+</div>
+<section id= "results" class="middle-hero hidden">
+<div class="container">
 <div class="row">
-  <div class="col-md-5">
-    <p>Difference: <span id="diff"></span></p>
+  <div class="col-md-8">
+    <p><span id="diff"></span></p>
     <p>When it is 8am in Left, it is <span id="difflit"></span> in right</p>
   </div>
 </div>
       </div>
-
+</section>
   </section>
   <section class="middle-hero footer">
     <p>Taylor Ackley | <a href="http://github.com/taylorackley/meetinghelper">View this on <i  class="fa fa-github fa-lg"></i></a></p>

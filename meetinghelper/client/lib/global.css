@@ -34,6 +34,10 @@ body {
   margin-left: 20px;
 }
 
+.hidden {
+  display: none;
+}
+
 .control2 {
   margin-top:20px;
 }
