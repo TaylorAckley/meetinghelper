@@ -60,7 +60,16 @@ Template.app.events({
       $('#diff').html(leftObj[2] + " is " + diff + " hours ahead of " + rightObj[2]);
     }
     var difflit = (rightUTC - leftUTC) + 8;
-      $('#difflit').html(difflit);
+    var diffsem = "";
+// todo: refactor this to use += instead.  this is ugly... but works!
+      if (difflit < 12) {
+        diffsem = difflit + "am";
+      }
+      else {
+        diffsem =  difflit + "pm";
+      }
+
+      $('#difflit').html("When it is 8am in " + leftObj[2] + " then it is " + diffsem + " in " + rightObj[2]);
       $('#results').removeClass('hidden');
   }  // end if
   else {
