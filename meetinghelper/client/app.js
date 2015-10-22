@@ -42,12 +42,13 @@ Meteor.http.get(url, function(error, result) {
 Template.app.events({
   "click #execute": function() {
     $('#error').html("");
+    ga('send', 'event', 'Windows', 'execute');
     var leftObj = Session.get("leftTzObj");
     var rightObj = Session.get("rightTzObj");
-    var date = $("#meeting").val();
+    //var date = $("#meeting").val();
     var leftUTC = leftObj[0];
     var rightUTC = rightObj[0];
-    if (leftObj && rightObj && date) {
+    if (leftObj && rightObj) {
     console.log(leftUTC);
     console.log(rightUTC);
     var diff = leftUTC - rightUTC;
@@ -62,7 +63,13 @@ Template.app.events({
     var difflit = (rightUTC - leftUTC) + 8;
     var diffsem = "";
 // todo: refactor this to use += instead.  this is ugly... but works!
-      if (difflit < 12) {
+      if (difflit < 0) {
+        difflit -= 8;
+        difflit += 12;
+        //difflit = Math.abs(difflit);
+        diffsem =  difflit + "pm the previous day";
+      }
+      else if (difflit < 12) {  //TODO this could be refactored
         diffsem = difflit + "am";
       }
       else {

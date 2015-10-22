@@ -1,3 +1,4 @@
+accounts-base@1.2.1
 aldeed:geocoder@0.3.8
 aldeed:timezoned@0.1.2
 autoupdate@1.2.3
@@ -13,10 +14,12 @@ caching-compiler@1.0.0
 caching-html-compiler@1.0.2
 callback-hook@1.0.4
 check@1.0.6
+coffeescript@1.0.10
 dburles:google-maps@1.1.5
 ddp@1.2.2
 ddp-client@1.2.1
 ddp-common@1.2.1
+ddp-rate-limiter@1.0.0
 ddp-server@1.2.1
 deps@1.0.9
 diff-sequence@1.0.1
@@ -44,7 +47,9 @@ jeremy:geocomplete@1.6.5_7
 jquery@1.11.4
 launch-screen@1.0.4
 livedata@1.0.15
+localstorage@1.0.5
 logging@1.0.8
+lookback:seo@1.1.0
 meteor@1.1.9
 meteor-base@1.0.1
 minifiers@1.1.7
@@ -61,15 +66,19 @@ observe-sequence@1.0.7
 ordered-dict@1.0.4
 promise@0.5.0
 random@1.0.4
+rate-limit@1.0.0
 reactive-dict@1.1.2
 reactive-var@1.0.6
 reload@1.1.4
 retry@1.0.4
+reywood:iron-router-ga@0.7.1
 routepolicy@1.0.6
+service-configuration@1.0.5
 session@1.1.1
 simple:reactive-method@1.0.2
 spacebars@1.0.7
 spacebars-compiler@1.0.7
+spiderable@1.0.9
 standard-minifiers@1.0.1
 templating@1.1.4
 templating-tools@1.0.0
@@ -81,3 +90,4 @@ underscore@1.0.4
 url@1.0.5
 webapp@1.2.2
 webapp-hashing@1.0.5
+yasinuslu:blaze-meta@0.3.3
